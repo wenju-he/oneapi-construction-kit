@@ -152,7 +152,7 @@ PreservedAnalyses compiler::utils::AddSchedulingParametersPass::run(
 
     // Scrub any old subprogram - CloneFunctionInto will create a new one for
     // us
-    if (auto *const SP = OldF->getSubprogram()) {
+    if (OldF->getSubprogram()) {
       NewF->setSubprogram(nullptr);
     }
 

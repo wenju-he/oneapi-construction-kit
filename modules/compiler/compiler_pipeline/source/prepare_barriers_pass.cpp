@@ -83,7 +83,7 @@ PreservedAnalyses compiler::utils::PrepareBarriersPass::run(
       auto *const InfoF = cast<CallInst>(U)->getFunction();
       InlineFunctionInfo IFI;
       auto InlineResult =
-          InlineFunction(*cast<CallInst>(U), IFI, /*MergeAttributes*/ false,
+          InlineFunction(*cast<CallInst>(U), IFI, nullptr, nullptr, /*MergeAttributes*/ false,
                          /*CalleeAAR*/ nullptr, /*InsertLifetime*/ true,
                          /*ForwardVarArgsTo*/ nullptr);
       if (InlineResult.isSuccess()) {

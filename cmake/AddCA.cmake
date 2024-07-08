@@ -159,6 +159,8 @@ set(CA_COMPILE_OPTIONS
 
     -pedantic             # Enable warnings required by the C++ standard
     -Wall -Wextra         # Enable more warnings
+    -Wno-unused-parameter
+    -Wno-pessimizing-move
     -Wcast-qual           # Enable warnings for casting away const
     -Wformat              # Enable printf format warnings
 
